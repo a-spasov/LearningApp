@@ -23,7 +23,6 @@
     position: fixed;
     bottom: 0;
     width: 80%;
-    padding: 10px;
     font-weight: 700;
     font-family: 'New Tegomin', serif;
     font-size: 20px;

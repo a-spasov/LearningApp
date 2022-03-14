@@ -1,24 +1,24 @@
+<template>
+  <PageHeader msg="Welcome" isLogged = true />
+  <div class="content">
+    <ActionsForm />
+  </div>
+</template>
+
 <script>
 import PageHeader from "@/components/Header.vue";
-import TableActions from "@/components/TableActions.vue";
+import ActionsForm from "@/components/ActionsForm.vue";
 
 export default {
   name: "HomeView",
   components: {
     PageHeader,
-    TableActions
+    ActionsForm
   },
 };
 </script>
 
-<template>
-  <PageHeader msg="Welcome" isLogged = true />
-  <div class="content">
-    <TableActions />
-  </div>
-</template>
-
-<style>
+<style scope>
 @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
 
 h1 {

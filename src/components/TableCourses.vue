@@ -1,12 +1,3 @@
-<script>
-export default {
-  name: "TableCourses",
-  props: {
-    tableData: Array,
-  }
-}
-</script>
-
 <template>
     <div class="course-list-row" >
         <table >
@@ -35,8 +26,9 @@ export default {
                   </td>
                   <td>{{ data.split(' | ')[3]}}</td>
                   <td>
-                    <img v-if="data.split(' | ')[4] == '-'" alt="Logo picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIyJIXtEKyTFsqiS0BEywz9jQ6ZvDD-gVieg&usqp=CAU">
-                    <img v-else alt="Course picture" v-bind:src="data.split(' | ')[4]">
+                    <img v-if="data.split(' | ')[4].includes('https://')" alt="Logo picture" :src="data.split(' | ')[4]">
+                    <img v-else alt="Course picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIyJIXtEKyTFsqiS0BEywz9jQ6ZvDD-gVieg&usqp=CAU">
+                    
                   </td>
               </tr>
           </tbody>       
@@ -44,7 +36,16 @@ export default {
     </div>
 </template>
 
-<style>
+<script>
+export default {
+  name: "TableCourses",
+  props: {
+    tableData: Array,
+  }
+}
+</script>
+
+<style scope>
   table {
     border: 2px solid black;
     font-family: Arial, Helvetica, sans-serif;
