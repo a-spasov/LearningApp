@@ -1,30 +1,43 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="container">
+    <router-view/>  
+    <footer>
+      <nav>
+      <hr>
+        <router-link class="navItem" to="/">Home</router-link>
+        <router-link class="navItem" to="/learning">Learning</router-link>
+      </nav>
+    </footer>
+  </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+  .container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+    padding: 10px;
+    font-weight: 700;
+    font-family: 'New Tegomin', serif;
+    font-size: 20px;
+    background-color: white;
+  }
+  .navItem {
+    margin: 10px 40px;
+    text-decoration: none;
+    float: left;
+  }
+  hr {
+  clear: both;
+  border: 0;
+  height: 4px;
+  background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,.75),rgba(0,0,0,0));
+  }
 </style>
