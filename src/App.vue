@@ -29,7 +29,8 @@
     background-color: white;
   }
   .navItem {
-    margin: 10px 40px;
+    margin: 0 40px;
+    padding: 16px;
     text-decoration: none;
     float: left;
   }

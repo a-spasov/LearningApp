@@ -34,7 +34,7 @@ hr {
   background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,.75),rgba(0,0,0,0));
 }
 .content {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 </style>
 
